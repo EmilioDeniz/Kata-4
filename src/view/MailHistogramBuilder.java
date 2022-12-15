@@ -8,7 +8,7 @@ public class MailHistogramBuilder {
         Histogram<String> hist = new Histogram<String>();
     
         for(String mail : list){
-            hist.increment(mail);
+            hist.increment(mail.substring(1,mail.length()));
         }
         return hist;
     }
